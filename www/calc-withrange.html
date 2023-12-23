@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derivative Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@12.2.0/lib/browser/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h1>Derivative Calculator With Range</h1>
+    <a href="index.html">Kembali</a>
+    <input
+      type="text"
+      id="expression"
+      placeholder="Enter function expression"
+    />
+    <input
+      type="text"
+      id="rangeInput"
+      placeholder="Calculation Range (optional)"
+    />
+
+    <button onclick="calculateDerivative()">Calculate Derivative</button>
+    <div id="result"></div>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script src="js/range.js"></script>
+  </body>
+</html>
