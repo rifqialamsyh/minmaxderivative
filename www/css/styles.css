@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.contanier{
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contanier::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-color: #ff9dcf;
+}
+.contanier .hero{
+    position: relative;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #ff9dcf;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 0 40px 0 80px;
+}
+.hero nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+}
+.hero nav .logo{
+    color: #801f82;
+    font-size: 40px;
+    font-weight: bold;
+}
+.hero nav .nav-links a {
+    color: #242424;
+    margin-left: 40px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.hero nav .nav-links a:hover,
+.hero nav .nav-links a.active{
+    color: #801f82;
+}
+.hero .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+}
+.hero .content .div-text {
+    width: 40%;
+}
+
+.hero .content .div-text a {
+    display: block; /* Make links block-level elements */
+    margin-bottom: 10px; /* Add space between buttons */
+}
+
+.hero .content .div-text .btn {
+    display: block; /* Make buttons block-level elements */
+    padding: 15px 20px;
+    background-color: #801f82;
+    border: 2px solid #801f82;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center; /* Center text within the button */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.hero .content .div-text .btn i {
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff; /* Set the icon color to white */
+    margin-bottom: 5px; /* Reduce the margin for a cleaner look */
+    display: block; /* Ensure the icon is a block-level element */
+    transition: 0.4s;
+}
+
+.hero .content .div-text .btn:hover {
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.hero .content .div-text .btn:hover i {
+    color: #801f82;
+}
+
+
+.hero .content .div-img{
+    width: 40%;
+}
+.hero .content .div-img img{
+    width: 60%;
+    
+}
+/* animation */
+
+.hero .logo,
+.hero .content .div-text .btn{
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+.hero .logo{
+    animation-delay: 0.2s;
+}
+
+.hero .content .div-text .btn{
+    animation-delay: 1.8s;
+}
+@keyframes slide-top{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.hero .content .div-img img{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+}
+@keyframes fade-img{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

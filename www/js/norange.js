@@ -51,16 +51,21 @@ function calculateDerivative() {
     );
 
     // Find the highest and lowest values for extrema
-    const maximum = Math.max(...functionValues);
     const minimum = Math.min(...functionValues);
+    const maximum = Math.max(...functionValues);
 
     // Display derivative result, critical points, and extrema
-    calculationSteps.push(`Critical points: ${JSON.stringify(criticalPoints)}`);
-    calculationSteps.push(`Maximum value: ${maximum}`);
+    //calculationSteps.push(`Critical points: ${JSON.stringify(criticalPoints)}`);
     calculationSteps.push(`Minimum value: ${minimum}`);
+    calculationSteps.push(`Maximum value: ${maximum}`);
 
     // Display all calculation steps
     document.getElementById("result").innerHTML = calculationSteps.join("<br>");
+
+    // Display derivative result, critical points, and extrema
+    const resultElement = document.getElementById("result");
+    resultElement.innerHTML = `<strong>Turunan Fungsi thd Sumbu X:</strong><br> ${derivativeResult}<br>`;
+    resultElement.innerHTML += `<strong>Hitung Fungsi pada Titik Stationer:</strong><br>${calculationSteps.join("<br>")}`;
 
     // Display chart
     displayChart(

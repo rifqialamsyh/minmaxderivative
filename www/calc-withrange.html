@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derivative Calculator</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivative Calculator with Range</title>
+    <link rel="icon" type="image/png" href="css/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/mathjs@12.2.0/lib/browser/math.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Derivative Calculator With Range</h1>
-    <a href="index.html">Kembali</a>
-    <input
-      type="text"
-      id="expression"
-      placeholder="Enter function expression"
-    />
-    <input
-      type="text"
-      id="rangeInput"
-      placeholder="Calculation Range (optional)"
-    />
+    <div class="contanier">
+      <div class="hero">
+          <nav>
+              <a href="index.html" class="logo">Dashboard</a>
+          </nav>
 
-    <button onclick="calculateDerivative()">Calculate Derivative</button>
-    <div id="result"></div>
-    <canvas id="myChart" width="400" height="200"></canvas>
+          <div class="content">
+              <div class="div-text">
+                  <h1>Kalkulator dengan Selang</h1>
+                  <h4>Masukkan Persamaan</h4>
+                  <div class="form-group">
+                      <input type="text" class="form-control equation-input" id="expression" placeholder="e.g., x / (1 + x^2)">
+                  </div>
+                  <h4>Interval Selang</h4>
+                  <div class="form-group">
+                      <input type="text" class="form-control equation-input" id="rangeInput" placeholder="e.g., -1, 4">
+                  </div>
+                  <button type="button" class="btn" onclick="calculateDerivative()">Hitung</button>
+              </div>
+
+              <div class="div-img">
+                  <div id="result" class="result"></div>
+                  <canvas id="myChart" class="chart"></canvas>
+              </div>
+          </div>
+
+      </div>
+  </div>
     <script src="js/range.js"></script>
   </body>
 </html>
